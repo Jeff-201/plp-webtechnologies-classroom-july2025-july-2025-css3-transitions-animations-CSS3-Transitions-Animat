@@ -1,0 +1,63 @@
+/* --- Part 1: CSS Transitions (Hover Button) --- */
+#hoverBtn {
+  padding: 10px 20px;
+  background: royalblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.5s ease, transform 0.3s ease;
+}
+
+#hoverBtn:hover {
+  background: darkorange; /* smoothly transitions to orange */
+  transform: scale(1.1);
+}
+
+/* --- Part 1: CSS Keyframe Animation (Bouncing Box) --- */
+.animated-box {
+  width: 50px;
+  height: 50px;
+  background: crimson;
+  margin: 20px auto;
+  border-radius: 6px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+}
+
+/* --- Part 3: Box controlled by JS --- */
+#box {
+  width: 100px;
+  height: 100px;
+  background: teal;
+  margin: 20px auto;
+  border-radius: 8px;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+
+#box.animate {
+  transform: rotate(360deg) scale(1.2);
+  background: orange; /* transitions to orange when animated */
+}
+
+/* --- New: Click-to-animate button styling --- */
+#animateBtn {
+  padding: 10px 20px;
+  background: seagreen;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+#animateBtn:hover {
+  background: mediumvioletred; /* smooth hover transition */
+}
+#animateBtn:active {
+  background: darkgreen; /* feedback on click */
+}
